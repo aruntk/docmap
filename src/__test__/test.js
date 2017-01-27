@@ -3,7 +3,10 @@ import docMap from '..';
 
 describe('basics', function () {
   it('returns comments', function () {
-    const comments = docMap('var x = 42; // answer');
+    const commentsAST = docMap('var x = 42; // answer');
+    const comments = commentsAST.map(function(c) {
+      return c ? c.value : '';
+    }).join('\n');
     assert.equal('answer', comments.trim());
   });
 });
