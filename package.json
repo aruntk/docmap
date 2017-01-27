@@ -29,6 +29,6 @@
     "jest": "^18.1.0"
   },
   "dependencies": {
-    "babylon": "^6.15.0"
+    "espree": "^3.3.2"
   }
 }
